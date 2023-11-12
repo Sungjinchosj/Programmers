@@ -1,18 +1,30 @@
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 class Solution {
     public int[] solution(int[] arr, int k) {
-        int[] answer = new int[k];
-        List<Integer> list = new ArrayList<>();
-        int[] kArr = Arrays.stream(arr).distinct().toArray();
-        int len = kArr.length;
-        for(int i =0; i<answer.length; i++) {
-            if(len != 0) {
-                len --;
-                answer[i] = kArr[i];
-            }else {
-                answer[i] = -1;
-            }
-        }
-        return answer;
+         int[] answer = {};
+                    answer = new int[k];
+                    
+                    List<Integer> num = new ArrayList<>();
+                    int [] kArr = Arrays.stream(arr).distinct().toArray();
+
+                    int length = kArr.length;
+                    
+                    for(int i=0; i<answer.length; i++) {
+                        if(length != 0){
+                            answer[i] = kArr[i];
+                            length--;
+                        }else{
+                            answer[i] = -1;
+                        }
+                    	
+                    }
+                    
+                 
+          
+                    
+                    return answer;
     }
 }
